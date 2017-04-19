@@ -1,0 +1,19 @@
+{
+    "name": "rgehan/paginator",
+    "description": "A simple PHP paginator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Renan GEHAN",
+            "email": "rgehan94@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "rgehan\\paginator\\": "src/"
+        }
+    }
+}
