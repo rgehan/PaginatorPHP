@@ -1,12 +1,10 @@
 <?php
 
-//require('../vendor/autoload.php');
-
 use PHPUnit\Framework\TestCase;
 use rgehan\paginator\Paginator;
 
 /**
- * @covers Email
+ * @covers Paginator
  */
 final class PaginatorTest extends TestCase
 {
