@@ -15,5 +15,8 @@
         "psr-4": {
             "rgehan\\paginator\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
     }
 }
