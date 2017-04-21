@@ -2,6 +2,9 @@
 
 namespace rgehan\paginator;
 
+use InvalidArgumentException;
+use Exception;
+
 class Paginator
 {
     private $itemsCount;
@@ -16,6 +19,12 @@ class Paginator
      */
     public function __construct($count, $perPage)
     {
+        if($count < 0)
+            throw new InvalidArgumentException("Items count cannot be negative");
+
+        if($perPage <= 0)
+            throw new InvalidArgumentException("Items count per page cannot be negative nor null");
+
         $this->itemsCount = $count;
         $this->itemsPerPage = $perPage;
 
@@ -61,11 +70,6 @@ class Paginator
      */
     public function getValidPage($page)
     {
-        if($page < 0)
-            return 0;
-        else if($page >= $this->pagesCount)
-            return $this->pagesCount - 1;
-        else
-            return $page;
+        return max(0, min($this->pagesCount - 1, $page));
     }
 }
